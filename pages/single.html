@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AutiReach</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logoff.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/logoff.png">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link href="../assets/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="../lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <style>
+
+.bg-primary {
+    background: linear-gradient(135deg, #4e54c8, #8089ff) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/api/placeholder/1920/400') center/cover;
+    opacity: 0.1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.display-3 {
+    font-family: 'Arial', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb-container {
+    background: rgba(255,255,255,0.1);
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+}
+
+.breadcrumb-container a {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.breadcrumb-container a:hover {
+    color: #e0e0e0 !important;
+}
+
+.breadcrumb-container a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.breadcrumb-container a:hover::after {
+    width: 100%;
+}
+
+.decorative-shape {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    right: -150px;
+    top: -150px;
+}
+.highlight {
+    background-color: #fff3cd;
+    padding: 2px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.search-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4e54c8;
+    box-shadow: 0 0 0 3px rgba(78,84,200,0.1);
+}
+
+.search-icon {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4e54c8;
+}
+
+.search-stats {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+</style>
+    
+</head>
+
+<body>
+   <!-- Navbar Start -->
+   <div class="container-fluid bg-light position-relative shadow">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+        <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+            <img src="../assets/img/logo2.png" alt="Logo" style="width:200px; height: 150px;">
+            <span class="text-primary">AutiReach</span>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav font-weight-bold mx-auto py-0">
+                <a href="index.php" class="nav-item nav-link ">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="program.html" class="nav-item nav-link">Program</a>
+                <a href="shop.html" class="nav-item nav-link">Shop</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu rounded-0 m-0">
+                        <a href="blog.html" class="dropdown-item">Article Grid</a>
+                        <a href="single.html" class="dropdown-item active">Blog Autism</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="login.html" class="btn btn-primary px-4">Login</a>
+        </div>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary mb-5">
+        <div class="decorative-shape"></div>
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+            <div class="header-content text-center">
+                <i class="fas fa-blog mb-4" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <h3 class="display-3 font-weight-bold text-white">Share Experience and support</h3>
+                <div class="d-inline-flex breadcrumb-container">
+                    <p class="m-0"><a class="text-white" href="index.php">Home</a></p>
+                    <p class="m-0 px-2 text-white">/</p>
+                    <p class="m-0"><a class="text-white" href="single.html">Blog Detail</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    
+    <!-- Detail Start -->
+    <div class="container py-5">
+        <div class="row pt-5">
+            <div class="col-lg-8">
+                <div class="d-flex flex-column text-left mb-3">
+                    <p class="section-title pr-5"><span class="pr-2">Share story</span></p>
+                    <h1 class="mb-3">Blog about Autism </h1>
+                    <div class="d-flex">
+                        <p class="mr-3"><i class="fa fa-user text-primary"></i> Wei Liang</p>
+                        <p class="mr-3"><i class="fa fa-folder text-primary"></i> Story</p>
+                        <p class="mr-3"><i class="fa fa-comments text-primary"></i> 15</p>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <img class="img-fluid rounded w-100 mb-4" src="../assets/img/autism9.jpg" alt="Image">
+                    <p>In a small Malaysian town, nestled among the vibrant streets of night markets and coffee shops, lived the Lim family. Mr. and Mrs. Lim were proud parents of their 14-year-old son, Wei Liang, a boy with autism.</p>
+                    <p>Wei Liang saw the world in his own unique way. He was captivated by patterns—whether it was the way raindrops slid down a window or the symmetrical tiles on a shop floor. He often struggled with loud noises and unexpected changes, but he had a talent for drawing intricate landscapes that seemed to come alive on paper. </p>
+                    <p> For years, the Lims felt isolated. Many in their community didn’t understand autism and mistook Wei Liang’s behaviors for rudeness or lack of discipline. The family avoided crowded places, fearing judgment when Wei Liang became overwhelmed.</p>
+                    <h2 class="mb-4">Support from AutiReach</h2>
+                    <img class="img-fluid rounded w-50 float-left mr-4 mb-3" src="../assets/img/autism4.jpg" alt="Image">
+                    <p>One day, Mrs. Lim stumbled upon AutiReach, an initiative designed to connect the autism community with society. Its platform offered resources for caregivers, awareness programs for the public, and events tailored for individuals with autism. Intrigued, she signed up for a seminar.</p>
+                    <P> At the seminar, Mrs. Lim met other parents who shared similar struggles. A keynote speaker, Dr. Norzila Zakaria, shared insights on how to support children with autism. “Autism is not a barrier,” she said passionately. “It’s a different way of experiencing the world. With the right support, these children can thrive.”</P>
+                    <p> Encouraged, Mrs. Lim enrolled Wei Liang in a drawing workshop hosted by AutiReach. The workshop wasn’t just for children with autism—it was open to the community, creating a space for inclusion.</p>
+                    <h3 class="mb-4">Community gap</h3>
+                    <img class="img-fluid rounded w-50 float-right ml-4 mb-3" src="../assets/img/autism5.jpg" alt="Image">
+                    <p>At first, Wei Liang was hesitant. He sat in a corner, clutching his sketchbook. Slowly, a curious boy named Arif approached him.“Can I see your drawings?” he asked. Wei Liang didn’t respond but opened his sketchbook to a page filled with a stunning drawing of a rainforest.</p>
+                    <p>Arif’s eyes widened. “This is amazing! Can you teach me?”</p>
+                    <p>It was a simple question, but it sparked something in Wei Liang. For the first time, he wasn’t just the boy who struggled in noisy classrooms—he was an artist, appreciated for his talent.The workshop became a turning point. Wei Liang began participating in more AutiReach programs. The platform also offered a Motivation Program, where he could access mentorship sessions, including ones that taught him how to sell his artwork online through their eCommerce module.</p>
+                    <p> Meanwhile, AutiReach’s awareness campaigns started changing the community’s perspective. Schools introduced inclusive education strategies, local businesses began hiring individuals with autism, and families like the Lims felt less alone.
+
+                        One evening, Wei Liang’s artwork was displayed at a local art exhibition organized by AutiReach. The event was attended by people from all walks of life, including government representatives and community leaders. Standing by his artwork, Wei Liang received compliments from strangers who admired his talent.
+                        
+                        Mr. Lim, watching from a distance, felt a deep sense of pride. “This is what inclusion looks like,” he whispered to Mrs. Lim. “Wei Liang is no longer hidden. He’s a part of this community.”
+                        
+                        AutiReach became more than just a platform—it was a bridge connecting individuals with autism to the broader society. It gave families like the Lims hope and helped others see the beauty in neurodiversity.
+                        
+                        </p>
+                </div>
+
+               
+
+               
+                <!-- Comment Form -->
+                <div class="bg-light p-5">
+                    <h2 class="mb-4">Shere your story</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">link source</label>
+                            <input type="url" class="form-control" id="website">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group mb-0">
+                            <input type="submit" value="Leave Comment" class="btn btn-primary px-3">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <!-- Author Bio -->
+                <div class="d-flex flex-column text-center bg-primary rounded mb-5 py-5 px-4">
+                    <img src="../assets/img/autism4.jpg" class="img-fluid rounded-circle mx-auto mb-3" style="width: 100px;">
+                    <h3 class="text-secondary mb-3">Wei Ling</h3>
+                    <p class="text-white m-0">Wei Liang, a 14-year-old boy with autism in Malaysia, found his voice through art. Though he struggled with sensory challenges, his talent for drawing shone brightly</p>
+                </div>
+
+                <!-- Search Form -->
+                <div class="search-container">
+                    <form onsubmit="return false;">
+                        <div class="position-relative">
+                            <input 
+                                type="text" 
+                                class="search-input" 
+                                id="searchInput" 
+                                placeholder="Search in blog content..."
+                                oninput="performSearch(this.value)"
+                            >
+                            <i class="fa fa-search search-icon"></i>
+                        </div>
+                    </form>
+                    <div id="searchStats" class="search-stats"></div>
+                </div>
+
+               
+
+              
+
+                <!-- Single Image -->
+                <div class="mb-5">
+                    <img src="../assets/img/autism7.jpg" alt="" class="img-fluid rounded">
+                </div>
+
+                <!-- Recent Post -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Incoming story</h2>
+                    <div class="d-flex align-items-center bg-light shadow-sm rounded overflow-hidden mb-3">
+                        <img class="img-fluid" src="../assets/img/autism11.jpg" style="width: 80px; height: 80px;">
+                        <div class="pl-3">
+                            <h5 class="">coming soon</h5>
+                            <div class="d-flex">
+                                <small class="mr-3">
+                                    <i class="fas fa-spinner fa-spin" style="color: #74C0FC;"></i>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center bg-light shadow-sm rounded overflow-hidden mb-3">
+                        <img class="img-fluid" src="../assets/img/autism6.jpg" style="width: 80px; height: 80px;">
+                        <div class="pl-3">
+                            <h5 class="">coming soon</h5>
+                            <div class="d-flex">
+                                <small class="mr-3">
+                                    <i class="fas fa-spinner fa-spin" style="color: #74C0FC;"></i>
+                                </small>
+                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center bg-light shadow-sm rounded overflow-hidden mb-3">
+                        <img class="img-fluid" src="../assets/img/autism2.jpg" style="width: 80px; height: 80px;">
+                        <div class="pl-3">
+                            <h5 class="">coming soon</h5>
+                            <div class="d-flex">
+                                <small class="mr-3">
+                                    <i class="fas fa-spinner fa-spin" style="color: #74C0FC;"></i>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Image -->
+                <div class="mb-5">
+                    <img src="img/blog-2.jpg" alt="" class="img-fluid rounded">
+                </div>
+
+                <!-- Tag Cloud -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Tag Cloud on internet</h2>
+                    <div class="d-flex flex-wrap m-n1">
+                        <a href="https://www.tlcmalaysia.com/aba-therapy?gad_source=1&gclid=CjwKCAiAjp-7BhBZEiwAmh9rBdqP_KSSkUVIyv0rsa3g_i8cIuRyESTX1PtrsADKEiWWN6dKDXQO-hoC2nsQAvD_BwE" class="btn btn-outline-primary m-1">ABA Therapy</a>
+                        <a href="https://www.breakingsocialbarriers.com/?gad_source=1&gclid=CjwKCAiAjp-7BhBZEiwAmh9rBd0IziTH0jPWOpAu0U4kgy5kdbTr7HVfYY3Dxc7XD9MRsxwMYJtFhxoC8psQAvD_BwE" class="btn btn-outline-primary m-1">Breaking Social Barriers</a>
+                        <a href="https://autismpartnership.com.sg/en/?gad_source=1&gclid=CjwKCAiAjp-7BhBZEiwAmh9rBZ0TwmhfvBdzMIKFG9AiPSaZXOxd7Ep9gEfPI3b8LXRpf3xbDIonPBoCyQcQAvD_BwE" class="btn btn-outline-primary m-1">Autism Partnership</a>
+                        <a href="https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders" class="btn btn-outline-primary m-1">Autism</a>
+                        <a href="https://www.autismspeaks.org/what-autism" class="btn btn-outline-primary m-1">Autism Speaks</a>
+                        <a href="https://www.cdc.gov/autism/about/index.html" class="btn btn-outline-primary m-1">CDC</a>
+                    </div>
+                </div>
+
+              
+
+                <!-- Plain Text -->
+                <div>
+                    <h2 class="mb-4">Why We Need AutiReach</h2>
+                     <p>AutiReach bridges the gap between the autism community and society, fostering understanding, inclusion, and empowerment. It provides resources for caregivers, awareness programs to reduce stigma, and platforms for individuals with autism to showcase their talents. </p>
+                     <p>By creating a supportive community, AutiReach helps break barriers, ensuring everyone has a chance to thrive.</p>
+                </div>
+
+                  <!-- Single Image -->
+                  <h2><div class="mb-5">Support us by donation</div></h2>
+                    <img src="../assets/img/bankqr.jpg" alt="" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Detail End -->
+
+    
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0" style="font-size: 40px; line-height: 40px;">
+                    <img src="../assets/img/logo.png" alt="Logo" style="width:110px; height: 110px;">
+                    <span class="text-white">AutiReach</span>
+                </a>
+                <p>"AutiReach is a dedicated platform bridging the gap between the autism community and society, providing resources, programs, and products to empower and support individuals with autism."</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Get In Touch</h3>
+                <div class="d-flex">
+                    <h4 class="fa fa-map-marker-alt text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Address</h5>
+                        <p>UNIKL MIIT</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-envelope text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Email</h5>
+                        <p>mfirdaus.rosli@s.unikl.edu.com</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-phone-alt text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Phone</h5>
+                        <p>+60-166061049</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Quick Links</h3>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Program</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Get Our Notification</h3>
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control border-0 py-4" placeholder="Your Email"
+                            required="required" />
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn-block border-0 py-3" type="submit">Submit Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, .2);;">
+            <p class="m-0 text-center text-white">
+                &copy; <a class="text-primary font-weight-bold" href="#">AutiReach</a>. All Rights Reserved and Updated
+                by
+                <a class="text-primary font-weight-bold" target="_blank" href="https://www.linkedin.com/in/muhammad-firdaus-3b8105270/">Muhd Firdaus b. Rosli</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script> function performSearch(searchText) {
+        // Remove existing highlights
+        removeHighlights();
+        
+        if (!searchText.trim()) {
+            document.getElementById('searchStats').textContent = '';
+            return;
+        }
+    
+        // Specifically target the Detail Start section content
+        const detailContent = document.querySelector('.container.py-5 .col-lg-8 .mb-5'); // Target the detail content div
+        if (!detailContent) return;
+    
+        let matchCount = 0;
+        
+        // Only search in paragraphs and headers within the detail content
+        const contentElements = detailContent.querySelectorAll('p, h1, h2, h3, h4, h5');
+        
+        contentElements.forEach(element => {
+            const text = element.innerHTML;
+            // Skip images and already highlighted content
+            if (!text.includes('highlight') && !text.includes('<img')) {
+                const regex = new RegExp(searchText, 'gi');
+                const newText = text.replace(regex, match => {
+                    matchCount++;
+                    return `<span class="highlight">${match}</span>`;
+                });
+                element.innerHTML = newText;
+            }
+        });
+    
+        // Update search statistics with more specific message
+        const statsElement = document.getElementById('searchStats');
+        if (matchCount > 0) {
+            statsElement.textContent = `Found ${matchCount} match${matchCount === 1 ? '' : 'es'} in the story`;
+        } else {
+            statsElement.textContent = 'No matches found in the story';
+        }
+    }
+    
+    function removeHighlights() {
+        const detailContent = document.querySelector('.container.py-5 .col-lg-8 .mb-5');
+        if (!detailContent) return;
+        
+        const highlights = detailContent.querySelectorAll('.highlight');
+        highlights.forEach(highlight => {
+            const parent = highlight.parentNode;
+            parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+        });
+    }
+    
+    // Add keyboard shortcut (Ctrl/Cmd + F)
+    document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+            e.preventDefault();
+            document.getElementById('searchInput').focus();
+        }
+    });</script>
+</body>
+
+</html>
